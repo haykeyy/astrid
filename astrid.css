@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    font-family: 'Arial';
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* navigation */
+.mobile-navigation {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    border-bottom: solid rgb(204, 199, 199) 2px;
+}
+.mobile-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  } 
+  
+.mobile-navigation li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    color: black;
+  }
+  
+.mobile-navigation li a:hover {
+    background-color: #f4f4f4;
+    text-decoration: underline;
+  }
+  
+.mobile-navigation .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+.mobile-navigation .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+ 
+.mobile-navigation .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+.mobile-navigation .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+.mobile-navigation .menu-icon .navicon:before,
+  .mobile-navigation .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+.mobile-navigation .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+.mobile-navigation .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+.mobile-navigation .menu-btn {
+    display: none;
+  }
+  
+.mobile-navigation .menu-btn:checked ~ .menu {
+    max-height: 380px;
+  }
+  
+.mobile-navigation .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+.mobile-navigation .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+.mobile-navigation .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+.mobile-navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .mobile-navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+@media (min-width: 48em) {
+    .mobile-navigation li {
+      float: left;
+      line-height: 100px;
+    }
+    .mobile-navigation li a {
+      padding: 20px 50px;
+      border-right: white;
+    }
+    .mobile-navigation .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .mobile-navigation .menu-icon {
+      display: none;
+    }
+}
+  
+.dropitems a {
+    text-transform: uppercase;
+    text-align: right;
+    color: black;
+    padding: 40px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#logo {
+    height: 139px;
+    width: 199px;
+    float: left;
+}
+
+/* banner */
+.main, #motto, footer, .content {
+    top: 100px;
+}
+
+.main {
+    position: relative;
+    background-color: #f1d1d1;
+    font-size: 30px;
+    text-align: center;
+    padding: 100px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.main h2 {
+    padding-top: 30px;
+    font-size: 15px;
+    color: grey;
+}
+
+#otherpagebanner {
+  background-color: rgb(241, 209, 209, 0.8);
+}
+
+/* banner 2 (main page only) */
+#motto {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    padding: 150px;
+    color:rgb(90, 89, 89);
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: url(pastelbg.jpg);
+    margin: 80px 0;
+}
+
+/* main content box */
+.content {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    margin: 80px 200px;
+    min-width: 400px;
+    color: rgb(90, 89, 89);
+    border-top: solid rgb(212, 212, 212) 2px;
+    border-bottom: solid rgb(212, 212, 212) 2px;
+    padding: 50px 150px;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+      padding: 50px 0;
+      margin: 80px auto;
+      line-height: 1.5;
+      font-size: 15px;
+      width: 20px;
+    }
+  }
+
+/* footer */
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: #f7b0b0;
+    align-items: flex-end;
+    text-align: center
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    color: rgb(90, 89, 89);
+}
+
+#contact, #social {
+    display: inline-block;
+    padding: 50px;
+    color: rgb(90, 89, 89);
+}
+
+footer h2 {
+  padding-bottom: 5px;
+}
