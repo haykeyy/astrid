@@ -197,7 +197,7 @@ a:hover {
 
 /* graphic banners */
 #aboutusbanner {
-  background-image: url(/media/aboutusbanner.jpg);
+  background-image: url(../media/aboutusbanner.jpg);
   background-size: 1400px;
 }
 
